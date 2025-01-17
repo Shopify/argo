@@ -62,7 +62,7 @@ export interface Extension<Target extends ExtensionTarget = ExtensionTarget> {
   /**
    * The API version that was set in the extension config file.
    *
-   * @example '2024-04', '2024-07', '2024-10', '2025-01', 'unstable'
+   * @example '2024-07', '2024-10', '2025-01', '2025-04', 'unstable'
    */
   apiVersion: ApiVersion;
 
@@ -746,7 +746,7 @@ export interface StandardApi<Target extends ExtensionTarget = ExtensionTarget> {
    * The API for reading additional fields that are required in checkout under certain circumstances.
    * For example, some countries require additional fields for customs information or tax identification numbers.
    */
-  localizedFields?: StatefulRemoteSubscribable<LocalizedField[] | undefined>;
+  localizedFields?: StatefulRemoteSubscribable<LocalizedField[]>;
 }
 
 export interface Ui {
